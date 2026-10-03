@@ -46,12 +46,13 @@ class FaultTolerantAgent:
 
     def __init__(self):
         # TODO: interne state — welke variabelen heb je nodig?
-        pass
+        self.previous_value = None
+        self.faulty_sensor = None
 
     def read_all(self, p: Reading) -> tuple[float, float]:
         """Sensors: geef beide metingen terug."""
         # TODO
-        pass
+        return (p.sensor_a, p.sensor_b)
 
     def reliable_value(self, a: float, b: float, previous: Optional[float]) -> float:
         """Sensor model: bepaal de meest betrouwbare hoogtemeting.
@@ -64,13 +65,31 @@ class FaultTolerantAgent:
           bij voorkeur sensor a.
         """
         # TODO: implementeer dit 
+        if previous is None: return a
+        if self.faulty_sensor == "a": return b
+        if self.faulty_sensor == "b": return a
+        if abs(a-b) <= self.TOLERANCE: return (a + b) / 2
+        if abs(previous-a) < abs(previous-b): 
+            self.faulty_sensor = "b"
+            return a
+        else:
+            self.faulty_sensor = "a"
+            return b
+        
 
     def process(self, p: Reading):
         # TODO: kies de betrouwbare meting, bepaal de trend (delta t.o.v.
         #       de vorige waarde) en vraag correctie aan als de daling
         #       sneller is dan DESCENT_LIMIT. Vergeet de interne state
         #       niet bij te werken.
-        return Nothing()
+        current_value = self.reliable_value(p.sensor_a, p.sensor_b, self.previous_value)
+        action = Nothing()
+        if self.previous_value == None:
+            self.previous_value = current_value
+        elif current_value - self.previous_value < self.DESCENT_LIMIT: 
+            action = Correct()
+        self.previous_value = current_value
+        return action
 
 
 if __name__ == "__main__":

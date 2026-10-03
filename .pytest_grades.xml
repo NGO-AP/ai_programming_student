@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="35" skipped="4" tests="64" time="24.653" timestamp="2026-09-22T12:31:55.834373+00:00" hostname="2ed3f02aea7a"><testcase classname="" name="tests.test_week02" time="0.000"><skipped message="collection skipped">('/workspaces/ai_programming_student/tests/test_week02.py', 33, "Skipped: solution.py kon niet geimporteerd worden: No module named 'exercises.week02.solution'")</skipped></testcase><testcase classname="" name="tests.test_week05" time="0.000"><skipped message="collection skipped">('/workspaces/ai_programming_student/tests/test_week05.py', 41, "Skipped: knapsack_start.py kon niet geimporteerd worden: No module named 'pygad'")</skipped></testcase><testcase classname="" name="tests.test_week08" time="0.000"><skipped message="collection skipped">('/workspaces/ai_programming_student/tests/test_week08.py', 25, "Skipped: portfolio_start.py kon niet geïmporteerd worden: No module named 'osqp'")</skipped></testcase><testcase classname="" name="tests.test_week11" time="0.000"><skipped message="collection skipped">('/workspaces/ai_programming_student/tests/test_week11.py', 27, "Skipped: solution.py kon niet geïmporteerd worden: No module named 'exercises.week11.solution'")</skipped></testcase><testcase classname="tests.test_week01" name="test_insertion_sort_basic" time="0.009" /><testcase classname="tests.test_week01" name="test_insertion_sort_edge_cases" time="0.001" /><testcase classname="tests.test_week01" name="test_insertion_sort_random" time="0.010" /><testcase classname="tests.test_week01" name="test_agent_initial_position" time="0.001" /><testcase classname="tests.test_week01" name="test_agent_moves_and_walls" time="0.002" /><testcase classname="tests.test_week01" name="test_agent_clean_tile" time="0.001" /><testcase classname="tests.test_week01" name="test_agent_clean_room" time="0.001" /><testcase classname="tests.test_week03" name="test_maze_valid_moves_midden" time="0.002"><failure message="TypeError: object of type 'NoneType' has no len()">tests/test_week03.py:83: in test_maze_valid_moves_midden
+    assert len(moves) == 4
+           ^^^^^^^^^^
+E   TypeError: object of type 'NoneType' has no len()</failure></testcase><testcase classname="tests.test_week03" name="test_maze_valid_moves_muur" time="0.001"><failure message="TypeError: argument of type 'NoneType' is not iterable">tests/test_week03.py:95: in test_maze_valid_moves_muur
+    assert (1, 0) not in moves
+           ^^^^^^^^^^^^^^^^^^^
+E   TypeError: argument of type 'NoneType' is not iterable</failure></testcase><testcase classname="tests.test_week03" name="test_maze_valid_moves_rand" time="0.001"><failure message="TypeError: object of type 'NoneType' has no len()">tests/test_week03.py:103: in test_maze_valid_moves_rand
+    assert len(moves) == 2
+           ^^^^^^^^^^
+E   TypeError: object of type 'NoneType' has no len()</failure></testcase><testcase classname="tests.test_week03" name="test_maze_extract_path" time="0.001"><failure message="assert False&#10; +  where False = isinstance(None, list)">tests/test_week03.py:114: in test_maze_extract_path
+    assert isinstance(pad, list)
+E   assert False
+E    +  where False = isinstance(None, list)</failure></testcase><testcase classname="tests.test_week03" name="test_maze_find_path_bestaat" time="0.001"><failure message="assert False&#10; +  where False = isinstance(None, tuple)">tests/test_week03.py:124: in test_maze_find_path_bestaat
+    assert isinstance(resultaat, tuple)
+E   assert False
+E    +  where False = isinstance(None, tuple)</failure></testcase><testcase classname="tests.test_week03" name="test_maze_find_path_onmogelijk" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">tests/test_week03.py:138: in test_maze_find_path_onmogelijk
+    pad, stappen = find_path(maze)
+    ^^^^^^^^^^^^
+E   TypeError: cannot unpack non-iterable NoneType object</failure></testcase><testcase classname="tests.test_week03" name="test_dijkstra_basis" time="0.002"><failure message="assert None is not None">tests/test_week03.py:168: in test_dijkstra_basis
+    assert pad is not None
+E   assert None is not None</failure></testcase><testcase classname="tests.test_week04" name="test_total_distance_basic" time="0.002"><failure message="AssertionError: verwacht 90, kreeg None&#10;assert None == 90">tests/test_week04.py:82: in test_total_distance_basic
+    assert afstand == 90, f"verwacht 90, kreeg {afstand}"
+E   AssertionError: verwacht 90, kreeg None
+E   assert None == 90</failure></testcase><testcase classname="tests.test_week04" name="test_total_distance_edge_cases" time="0.002"><failure message="AssertionError: verwacht 10, kreeg None&#10;assert None == 10">tests/test_week04.py:99: in test_total_distance_edge_cases
+    assert afstand == 10, f"verwacht 10, kreeg {afstand}"
+E   AssertionError: verwacht 10, kreeg None
+E   assert None == 10</failure></testcase><testcase classname="tests.test_week04" name="test_simulated_annealing_returns_valid_tour" time="0.002"><failure message="AssertionError: verwacht tuple, kreeg &lt;class 'NoneType'&gt;&#10;assert False&#10; +  where False = isinstance(None, tuple)">tests/test_week04.py:119: in test_simulated_annealing_returns_valid_tour
+    assert isinstance(resultaat, tuple), (
+E   AssertionError: verwacht tuple, kreeg &lt;class 'NoneType'&gt;
+E   assert False
+E    +  where False = isinstance(None, tuple)</failure></testcase><testcase classname="tests.test_week04" name="test_simulated_annealing_vindt_kortere_route" time="0.001"><failure message="TypeError: cannot unpack non-iterable NoneType object">tests/test_week04.py:154: in test_simulated_annealing_vindt_kortere_route
+    best_tour, best_distance = solver.simulated_annealing()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: cannot unpack non-iterable NoneType object</failure></testcase><testcase classname="tests.test_week04" name="test_simulated_annealing_vier_steden" time="0.002"><failure message="TypeError: cannot unpack non-iterable NoneType object">tests/test_week04.py:176: in test_simulated_annealing_vier_steden
+    best_tour, best_distance = solver.simulated_annealing()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: cannot unpack non-iterable NoneType object</failure></testcase><testcase classname="tests.test_week06" name="test_bord_init" time="0.001" /><testcase classname="tests.test_week06" name="test_is_valid_move" time="0.001"><failure message="assert None is True&#10; +  where None = is_valid_move(0, 0)&#10; +    where is_valid_move = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252e5551d0&gt;.is_valid_move">tests/test_week06.py:99: in test_is_valid_move
+    assert spel.is_valid_move(0, 0) is True
+E   assert None is True
+E    +  where None = is_valid_move(0, 0)
+E    +    where is_valid_move = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252e5551d0&gt;.is_valid_move</failure></testcase><testcase classname="tests.test_week06" name="test_make_move" time="0.003"><failure message="AssertionError: assert ' ' == 'X'&#10;  &#10;  Strings contain only whitespace, escaping them using repr()&#10;  #x1B[0m#x1B[91m- 'X'#x1B[39;49;00m#x1B[90m#x1B[39;49;00m&#10;  #x1B[92m+ ' '#x1B[39;49;00m#x1B[90m#x1B[39;49;00m">tests/test_week06.py:113: in test_make_move
+    assert spel.board[0][0] == 'X'
+E   AssertionError: assert ' ' == 'X'
+E     
+E     Strings contain only whitespace, escaping them using repr()
+E     #x1B[0m#x1B[91m- 'X'#x1B[39;49;00m#x1B[90m#x1B[39;49;00m
+E     #x1B[92m+ ' '#x1B[39;49;00m#x1B[90m#x1B[39;49;00m</failure></testcase><testcase classname="tests.test_week06" name="test_check_winner_rijen" time="0.001"><failure message="AssertionError: assert None == 'X'&#10; +  where None = check_winner()&#10; +    where check_winner = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252c894c30&gt;.check_winner">tests/test_week06.py:125: in test_check_winner_rijen
+    assert spel.check_winner() == 'X'
+E   AssertionError: assert None == 'X'
+E    +  where None = check_winner()
+E    +    where check_winner = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252c894c30&gt;.check_winner</failure></testcase><testcase classname="tests.test_week06" name="test_check_winner_kolommen" time="0.002"><failure message="AssertionError: assert None == 'X'&#10; +  where None = check_winner()&#10; +    where check_winner = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252c895ba0&gt;.check_winner">tests/test_week06.py:135: in test_check_winner_kolommen
+    assert spel.check_winner() == 'X'
+E   AssertionError: assert None == 'X'
+E    +  where None = check_winner()
+E    +    where check_winner = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252c895ba0&gt;.check_winner</failure></testcase><testcase classname="tests.test_week06" name="test_check_winner_diagonalen" time="0.002"><failure message="AssertionError: assert None == 'X'&#10; +  where None = check_winner()&#10; +    where check_winner = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252c8da210&gt;.check_winner">tests/test_week06.py:145: in test_check_winner_diagonalen
+    assert spel.check_winner() == 'X'
+E   AssertionError: assert None == 'X'
+E    +  where None = check_winner()
+E    +    where check_winner = &lt;exercises.week06.tictactoe_start.TicTacToe object at 0x7f252c8da210&gt;.check_winner</failure></testcase><testcase classname="tests.test_week06" name="test_check_winner_geen_winnaar" time="0.001" /><testcase classname="tests.test_week06" name="test_is_draw" time="0.003" /><testcase classname="tests.test_week06" name="test_possible_moves" time="0.001" /><testcase classname="tests.test_week06" name="test_undo_move" time="0.002" /><testcase classname="tests.test_week06" name="test_minimax_basis_scores" time="0.002"><failure message="assert None == 1">tests/test_week06.py:210: in test_minimax_basis_scores
+    assert score == 1
+E   assert None == 1</failure></testcase><testcase classname="tests.test_week06" name="test_minimax_forceert_win" time="0.001"><failure message="AssertionError: X moet kunnen winnen, minimax-score = 1&#10;assert None == 1">tests/test_week06.py:231: in test_minimax_forceert_win
+    assert score == 1, "X moet kunnen winnen, minimax-score = 1"
+E   AssertionError: X moet kunnen winnen, minimax-score = 1
+E   assert None == 1</failure></testcase><testcase classname="tests.test_week06" name="test_find_best_move_wint" time="0.002"><failure message="AssertionError: er moet een zet gekozen worden&#10;assert None is not None">tests/test_week06.py:242: in test_find_best_move_wint
+    assert zet is not None, "er moet een zet gekozen worden"
+E   AssertionError: er moet een zet gekozen worden
+E   assert None is not None</failure></testcase><testcase classname="tests.test_week06" name="test_find_best_move_blokkeert" time="0.001"><failure message="AssertionError: er moet een zet gekozen worden&#10;assert None is not None">tests/test_week06.py:251: in test_find_best_move_blokkeert
+    assert zet is not None, "er moet een zet gekozen worden"
+E   AssertionError: er moet een zet gekozen worden
+E   assert None is not None</failure></testcase><testcase classname="tests.test_week07" name="test_bord_init" time="0.002" /><testcase classname="tests.test_week07" name="test_is_valid_move" time="0.002"><failure message="IndexError: list index out of range">tests/test_week07.py:108: in test_is_valid_move
+    assert spel.is_valid_move(8, 0, "X") is False
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exercises/week07/othello_start.py:27: in is_valid_move
+    if self.board[row][col] != " ":
+       ^^^^^^^^^^^^^^^
+E   IndexError: list index out of range</failure></testcase><testcase classname="tests.test_week07" name="test_make_move" time="0.001" /><testcase classname="tests.test_week07" name="test_opponent" time="0.001" /><testcase classname="tests.test_week07" name="test_count_pieces" time="0.001" /><testcase classname="tests.test_week07" name="test_valid_moves_start" time="0.002"><failure message="AssertionError: O moet 4 geldige zetten hebben, kreeg 2&#10;assert 2 == 4&#10; +  where 2 = len([(2, 2), (5, 5)])">tests/test_week07.py:163: in test_valid_moves_start
+    assert len(o_zetten) == 4, f"O moet 4 geldige zetten hebben, kreeg {len(o_zetten)}"
+E   AssertionError: O moet 4 geldige zetten hebben, kreeg 2
+E   assert 2 == 4
+E    +  where 2 = len([(2, 2), (5, 5)])</failure></testcase><testcase classname="tests.test_week07" name="test_random_move" time="0.002"><failure message="AssertionError: random_move mag None niet teruggeven&#10;assert None is not None">tests/test_week07.py:176: in test_random_move
+    assert zet is not None, "random_move mag None niet teruggeven"
+E   AssertionError: random_move mag None niet teruggeven
+E   assert None is not None</failure></testcase><testcase classname="tests.test_week07" name="test_evaluate" time="0.002"><failure message="AssertionError: evaluate moet een getal teruggeven&#10;assert False&#10; +  where False = isinstance(None, (&lt;class 'int'&gt;, &lt;class 'float'&gt;))">tests/test_week07.py:196: in test_evaluate
+    assert isinstance(score_x, (int, float)), "evaluate moet een getal teruggeven"
+E   AssertionError: evaluate moet een getal teruggeven
+E   assert False
+E    +  where False = isinstance(None, (&lt;class 'int'&gt;, &lt;class 'float'&gt;))</failure></testcase><testcase classname="tests.test_week07" name="test_minimax_diepte_0" time="0.002" /><testcase classname="tests.test_week07" name="test_minimax_simuleert_zetten" time="0.002"><failure message="AssertionError: minimax moet een getal teruggeven&#10;assert False&#10; +  where False = isinstance(None, (&lt;class 'int'&gt;, &lt;class 'float'&gt;))">tests/test_week07.py:247: in test_minimax_simuleert_zetten
+    assert isinstance(score, (int, float)), "minimax moet een getal teruggeven"
+E   AssertionError: minimax moet een getal teruggeven
+E   assert False
+E    +  where False = isinstance(None, (&lt;class 'int'&gt;, &lt;class 'float'&gt;))</failure></testcase><testcase classname="tests.test_week07" name="test_best_move" time="0.002"><failure message="AssertionError: best_move mag None niet teruggeven&#10;assert None is not None">tests/test_week07.py:258: in test_best_move
+    assert zet is not None, "best_move mag None niet teruggeven"
+E   AssertionError: best_move mag None niet teruggeven
+E   assert None is not None</failure></testcase><testcase classname="tests.test_week09" name="test_epsilon_greedy_vorm" time="0.002"><failure message="NameError: name 'reward' is not defined">tests/test_week09.py:86: in test_epsilon_greedy_vorm
+    resultaat = epsilon_greedy(arms=4, epsilon=0.1, num_iterations=50)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exercises/week09/epsilon_greedy_start.py:25: in epsilon_greedy
+    total_reward += reward
+                    ^^^^^^
+E   NameError: name 'reward' is not defined</failure></testcase><testcase classname="tests.test_week09" name="test_epsilon_greedy_bereik" time="0.002"><failure message="NameError: name 'reward' is not defined">tests/test_week09.py:107: in test_epsilon_greedy_bereik
+    average_rewards, true_rewards = epsilon_greedy(
+exercises/week09/epsilon_greedy_start.py:25: in epsilon_greedy
+    total_reward += reward
+                    ^^^^^^
+E   NameError: name 'reward' is not defined</failure></testcase><testcase classname="tests.test_week09" name="test_epsilon_greedy_exploit_convergeert" time="0.002"><failure message="NameError: name 'reward' is not defined">tests/test_week09.py:124: in test_epsilon_greedy_exploit_convergeert
+    average_rewards, true_rewards = epsilon_greedy(
+exercises/week09/epsilon_greedy_start.py:25: in epsilon_greedy
+    total_reward += reward
+                    ^^^^^^
+E   NameError: name 'reward' is not defined</failure></testcase><testcase classname="tests.test_week09" name="test_gittins_nul_is_inf" time="0.001" /><testcase classname="tests.test_week09" name="test_gittins_formule" time="0.001" /><testcase classname="tests.test_week09" name="test_gittins_gamma_default" time="0.001" /><testcase classname="tests.test_week09" name="test_gittins_hoge_reward_hogere_index" time="0.001" /><testcase classname="tests.test_week09" name="test_agent_initiele_toestand" time="0.001" /><testcase classname="tests.test_week09" name="test_agent_update" time="0.001" /><testcase classname="tests.test_week09" name="test_select_arm_geldige_arm" time="0.002"><failure message="AssertionError: select_arm geeft een geheel getal terug, kreeg NoneType&#10;assert False&#10; +  where False = isinstance(None, (&lt;class 'int'&gt;, &lt;class 'numpy.integer'&gt;))">tests/test_week09.py:224: in test_select_arm_geldige_arm
+    assert isinstance(keuze, (int, np.integer)), (
+E   AssertionError: select_arm geeft een geheel getal terug, kreeg NoneType
+E   assert False
+E    +  where False = isinstance(None, (&lt;class 'int'&gt;, &lt;class 'numpy.integer'&gt;))</failure></testcase><testcase classname="tests.test_week09" name="test_select_arm_verkiest_niet_geprobeerde_arm" time="0.001"><failure message="TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'">tests/test_week09.py:236: in test_select_arm_verkiest_niet_geprobeerde_arm
+    assert int(keuze) != 0, (
+           ^^^^^^^^^^
+E   TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'</failure></testcase><testcase classname="tests.test_week09" name="test_select_arm_kiest_bestste_arm" time="0.001"><failure message="TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'">tests/test_week09.py:251: in test_select_arm_kiest_bestste_arm
+    assert int(keuze) == 0, f"arm 0 heeft de hoogste index, kreeg arm {keuze}"
+           ^^^^^^^^^^
+E   TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'</failure></testcase><testcase classname="tests.test_week10" name="test_train_taxi_rewards_lengte" time="0.001"><failure message="gymnasium.error.DeprecatedEnv: Environment version v3 for `Taxi` is deprecated. Please use `Taxi-v4` instead.">tests/test_week10.py:86: in test_train_taxi_rewards_lengte
+    rewards = train_taxi(episodes=episodes)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+exercises/week10/qlearning_taxi_start.py:11: in train_taxi
+    env = gym.make('Taxi-v3')
+          ^^^^^^^^^^^^^^^^^^^
+/opt/venv/lib/python3.13/site-packages/gymnasium/envs/registration.py:682: in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+/opt/venv/lib/python3.13/site-packages/gymnasium/envs/registration.py:527: in _find_spec
+    _check_version_exists(ns, name, version)
+/opt/venv/lib/python3.13/site-packages/gymnasium/envs/registration.py:427: in _check_version_exists
+    raise error.DeprecatedEnv(
+E   gymnasium.error.DeprecatedEnv: Environment version v3 for `Taxi` is deprecated. Please use `Taxi-v4` instead.</failure></testcase><testcase classname="tests.test_week10" name="test_train_taxi_leert" time="0.002"><failure message="gymnasium.error.DeprecatedEnv: Environment version v3 for `Taxi` is deprecated. Please use `Taxi-v4` instead.">tests/test_week10.py:101: in test_train_taxi_leert
+    rewards = train_taxi(episodes=300)
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+exercises/week10/qlearning_taxi_start.py:11: in train_taxi
+    env = gym.make('Taxi-v3')
+          ^^^^^^^^^^^^^^^^^^^
+/opt/venv/lib/python3.13/site-packages/gymnasium/envs/registration.py:682: in make
+    env_spec = _find_spec(id)
+               ^^^^^^^^^^^^^^
+/opt/venv/lib/python3.13/site-packages/gymnasium/envs/registration.py:527: in _find_spec
+    _check_version_exists(ns, name, version)
+/opt/venv/lib/python3.13/site-packages/gymnasium/envs/registration.py:427: in _check_version_exists
+    raise error.DeprecatedEnv(
+E   gymnasium.error.DeprecatedEnv: Environment version v3 for `Taxi` is deprecated. Please use `Taxi-v4` instead.</failure></testcase><testcase classname="tests.test_week10" name="test_discretize_state_vorm" time="0.002" /><testcase classname="tests.test_week10" name="test_discretize_state_monotoon" time="0.001" /><testcase time="0.000" /></testsuite></testsuites>
